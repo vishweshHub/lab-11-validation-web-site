@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register New User - Database</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div class="logo-icon icon-login">➕</div>
+        <h1>Register New User</h1>
+        <p>Add credentials directly into the SQLite database</p>
+      </div>
+
+      {{ALERT_HTML}}
+
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="full_name">Full Name</label>
+          <input 
+            type="text" 
+            id="full_name" 
+            name="full_name" 
+            placeholder="e.g. Vishwesh Mekala" 
+            required 
+            autofocus
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="username">Login Name</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="e.g. vishwesh" 
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            placeholder="Choose a password" 
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input 
+            type="text" 
+            id="role" 
+            name="role" 
+            placeholder="e.g. Student / Developer" 
+            value="Student" 
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create User in Database</button>
+        <a href="/" class="btn btn-outline">Back to Login</a>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

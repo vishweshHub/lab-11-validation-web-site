@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Failed - User Validation</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card card-failure">
+      <div class="header">
+        <div class="logo-icon icon-failure">✕</div>
+        <h1>Login Failed</h1>
+        <p>Invalid credentials submitted to server</p>
+      </div>
+
+      <div class="alert alert-error">
+        <div>
+          <strong>Authentication Failure:</strong> The login name <code>{{USERNAME}}</code> or password did not match any active record in the database.
+        </div>
+      </div>
+
+      <div class="details-box">
+        <div class="details-row">
+          <span class="details-label">Submitted Username</span>
+          <span class="details-value">{{USERNAME}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Server Verification</span>
+          <span class="details-value" style="color: var(--error);">Database Record Match Failed</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Attempt Time</span>
+          <span class="details-value">{{ATTEMPT_TIME}}</span>
+        </div>
+      </div>
+
+      <a href="/?username={{USERNAME_ENCODED}}" class="btn btn-primary">Try Again</a>
+      <a href="/register" class="btn btn-outline">Register as New User</a>
+    </div>
+  </div>
+</body>
+</html>

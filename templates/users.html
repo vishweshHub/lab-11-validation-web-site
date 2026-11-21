@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Users List</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container" style="max-width: 650px;">
+    <div class="card">
+      <div class="header">
+        <div class="logo-icon icon-login">🗄️</div>
+        <h1>Database Users</h1>
+        <p>Current records stored in SQLite <code>users.db</code></p>
+      </div>
+
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table class="reference-table" style="font-size: 13px; width: 100%;">
+          <thead>
+            <tr style="border-bottom: 2px solid var(--gray-300);">
+              <th style="padding: 10px 8px;">ID</th>
+              <th style="padding: 10px 8px;">Full Name</th>
+              <th style="padding: 10px 8px;">Username</th>
+              <th style="padding: 10px 8px;">Password</th>
+              <th style="padding: 10px 8px;">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{USER_ROWS}}
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <a href="/" class="btn btn-primary">Go to Login</a>
+        <a href="/register" class="btn btn-outline" style="margin-top: 0;">Add New User</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

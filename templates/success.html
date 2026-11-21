@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Successful - User Validation</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card card-success">
+      <div class="header">
+        <div class="logo-icon icon-success">✓</div>
+        <h1>Login Successful!</h1>
+        <p>User credentials matched database records</p>
+      </div>
+
+      <div class="alert alert-success">
+        <div>
+          <strong>Authentication Passed:</strong> The login name and password match the data stored in the database.
+        </div>
+      </div>
+
+      <div class="details-box">
+        <div class="details-row">
+          <span class="details-label">Full Name</span>
+          <span class="details-value">{{FULL_NAME}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Login Name</span>
+          <span class="details-value">{{USERNAME}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">User Role</span>
+          <span class="details-value"><span class="badge">{{ROLE}}</span></span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Database ID</span>
+          <span class="details-value">#{{USER_ID}}</span>
+        </div>
+        <div class="details-row">
+          <span class="details-label">Login Timestamp</span>
+          <span class="details-value">{{LOGIN_TIME}}</span>
+        </div>
+      </div>
+
+      <a href="/" class="btn btn-primary">Sign Out / Return to Login</a>
+      <a href="/users" class="btn btn-outline">View All Database Users</a>
+    </div>
+  </div>
+</body>
+</html>
